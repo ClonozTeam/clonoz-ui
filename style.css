@@ -81,3 +81,10 @@ body {
 .listGrid :focus {
 	outline: none;
 }
+
+.title {
+	color: #878ea2;
+	font-size: 14px;
+	font-weight: 800;
+	text-transform: uppercase;
+}

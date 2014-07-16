@@ -1,27 +1,16 @@
 /**
  * Main view.
  */
-var view = Clonoz.Application.View;
+var view = Clonoz.View.TableView;
 Clonoz.createClass('View.Users.Users', view).addProperties({
-    width: '100%',
-    height: '100%',
-    overflow: 'hidden',
-    members : [{
-        _constructor: Clonoz.Component.ListGrid,
-        width: '100%',
-        showAllRecords: true,
-        showAllColumns: true,
-        autoFetchData: true,
+    label: {
+        contents: 'Databases'
+    },
+    addButton: {
+        title: 'Clone New Database'
+    },
+    list: {
         dataSource: 'users',
-        alternateRecordStyles: true,
-        showFilterEditor: true,
-        gridComponents:['header', 'filterEditor', 'body'],
-        showRecordComponents: true,
-        showRecordComponentsByCell: true,
-        canEdit: true,
-        overflow: 'auto',
-        margin: 10,
-        border: 0,
         fields: [
         { name: 'login', type: 'text', title: 'User Name' },
         { name: 'email', type: 'text', title: 'Email' },
@@ -67,7 +56,7 @@ Clonoz.createClass('View.Users.Users', view).addProperties({
                 }]
             }
         }]
-    }],
+    },
 
    components: {
         // Window to shedule periodical refreshing.

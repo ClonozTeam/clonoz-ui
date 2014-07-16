@@ -1,47 +1,16 @@
 /**
  * Main view.
  */
-var view = Clonoz.Application.View;
+var view = Clonoz.View.TableView;
 Clonoz.createClass('View.Databases.Databases', view).addProperties({
-    width: '100%',
-    height: '100%',
-    overflow: 'hidden',
-    vertical: true,
-    members : [{
-        _constructor: 'HLayout',
-        height: 50,
-        defaultLayoutAlign: 'center',
-        members: [{
-            _constructor: 'Label',
-            contents: 'Databases',
-            margin: '0px 20px'
-        }, {
-            _constructor: 'LayoutSpacer'
-        }, {
-            _constructor: 'IButton',
-            title: 'Clone New Database',
-            icon: '[SKIN]/actions/add.png',
-            iconSize: 16,
-            width: 150,
-            margin: '0px 20px'
-        }]
-    }, {
-        _constructor: Clonoz.Component.ListGrid,
-        width: '100%',
-        showAllRecords: true,
-        showAllColumns: true,
-        autoFetchData: true,
+    label: {
+        contents: 'Databases'
+    },
+    addButton: {
+        title: 'Clone New Database'
+    },
+    list: {
         dataSource: 'databases',
-        filterOnKeypress: true,
-        alternateRecordStyles: true,
-        showFilterEditor: true,
-        gridComponents:['header', 'filterEditor', 'body'],
-        showRecordComponents: true,
-        showRecordComponentsByCell: true,
-        canEdit: true,
-        overflow: 'auto',
-        margin: 10,
-        border: 0,
         fields: [{
             name: 'type',
             type: 'image',
@@ -124,7 +93,7 @@ Clonoz.createClass('View.Databases.Databases', view).addProperties({
                 }]
             }
         }]
-    }],
+    },
 
     components: {
         // Window to shedule periodical refreshing.

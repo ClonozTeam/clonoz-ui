@@ -1,26 +1,16 @@
 /**
  * Main view.
  */
-Clonoz.createClass('View.Sources.Sources', Clonoz.Application.View).addProperties({
-    width: '100%',
-    height: '100%',
-    overflow: 'hidden',
-    members : [{
-        _constructor: Clonoz.Component.ListGrid,
-        width: '100%',
-        showAllRecords: true,
-        showAllColumns: true,
-        autoFetchData: true,
+var view = Clonoz.View.TableView;
+Clonoz.createClass('View.Sources.Sources', view).addProperties({
+    label: {
+        contents: 'Sources'
+    },
+    addButton: {
+        title: 'Create New Source'
+    },
+    list: {
         dataSource: 'sources',
-        alternateRecordStyles: true,
-        showFilterEditor: true,
-        gridComponents:['header', 'filterEditor', 'body'],
-        showRecordComponents: true,
-        showRecordComponentsByCell: true,
-        canEdit: true,
-        overflow: 'auto',
-        margin: 10,
-        border: 0,
         fields: [{
             name: 'type',
             type: 'image',
@@ -75,5 +65,5 @@ Clonoz.createClass('View.Sources.Sources', Clonoz.Application.View).addPropertie
                 }]
             }
         }]
-    }]
+    }
 });
