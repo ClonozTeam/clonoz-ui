@@ -41,7 +41,7 @@ Clonoz.createClass('View.TableView', Clonoz.Application.View).addProperties({
             overflow: 'auto',
             margin: 10,
             border: 0
-        }],
+        }]
     },
 
     initWidget: function(config) {

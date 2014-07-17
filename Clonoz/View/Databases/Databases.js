@@ -7,7 +7,8 @@ Clonoz.createClass('View.Databases.Databases', view).addProperties({
         contents: 'Databases'
     },
     addButton: {
-        title: 'Clone New Database'
+        title: 'Clone New Database',
+        click: view.fire('Create')
     },
     list: {
         dataSource: 'databases',
@@ -121,6 +122,42 @@ Clonoz.createClass('View.Databases.Databases', view).addProperties({
                 align: 'right',
                 members: [
                     { _constructor: 'Button', title: 'Schedule', click: 'this.topElement.hide();' },
+                    { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
+                ]
+            }]
+        },
+
+        addWindow: {
+            _constructor: 'Window',
+            title: 'Add Database',
+            width: 320,
+            height: 300,
+            autoCenter: true,
+            isModal: true,
+            showModalMask: true,
+            items: [{
+                _constructor: 'DynamicForm',
+                height: '100%',
+                padding: 4,
+                numCols: 2,
+                titleOrientation: 'top',
+                titleWidth: 100,
+                dataSource: 'databases',
+                fields: [
+                    { name: 'name' },
+                    { name: 'source' },
+                    { name: 'refresh', title: 'First Refresh', type: 'datetime' },
+                    { name: 'period', title: 'Refresh period in hours', type: 'integer'},
+                    { name: 'note', colSpan: 3, width: '*' },
+                    { name: 'private' },
+                ]
+            }, {
+                _constructor: 'HLayout',
+                layoutMargin: 6,
+                membersMargin: 6,
+                align: 'right',
+                members: [
+                    { _constructor: 'Button', title: 'Clone', click: 'this.topElement.hide();' },
                     { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
                 ]
             }]

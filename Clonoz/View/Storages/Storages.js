@@ -7,7 +7,8 @@ Clonoz.createClass('View.Storages.Storages', view).addProperties({
         contents: 'Storages'
     },
     addButton: {
-        title: 'Create New Storage'
+        title: 'Create New Storage',
+        click: view.fire('Create')
     },
     list: {
         dataSource: 'storages',
@@ -65,5 +66,40 @@ Clonoz.createClass('View.Storages.Storages', view).addProperties({
                 }]
             }
         }]
+    },
+
+    components: {
+
+        addWindow: {
+            _constructor: 'Window',
+            title: 'Add Storage',
+            width: 250,
+            height: 150,
+            autoCenter: true,
+            isModal: true,
+            showModalMask: true,
+            items: [{
+                _constructor: 'DynamicForm',
+                height: '100%',
+                padding: 4,
+                numCols: 1,
+                titleOrientation: 'top',
+                titleWidth: 100,
+                dataSource: 'storages',
+                fields: [
+                    { name: 'name', width: '*' },
+                    { name: 'type', align: 'left', width: '*' }
+                ]
+            }, {
+                _constructor: 'HLayout',
+                layoutMargin: 6,
+                membersMargin: 6,
+                align: 'center',
+                members: [
+                    { _constructor: 'Button', title: 'Create', click: 'this.topElement.hide();' },
+                    { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
+                ]
+            }]
+        }
     }
 });

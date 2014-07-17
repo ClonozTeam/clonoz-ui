@@ -4,10 +4,11 @@
 var view = Clonoz.View.TableView;
 Clonoz.createClass('View.Users.Users', view).addProperties({
     label: {
-        contents: 'Databases'
+        contents: 'Users',
     },
     addButton: {
-        title: 'Clone New Database'
+        title: 'Create New User',
+        click: view.fire('Create')
     },
     list: {
         dataSource: 'users',
@@ -84,6 +85,43 @@ Clonoz.createClass('View.Users.Users', view).addProperties({
                 align: 'right',
                 members: [
                     { _constructor: 'Button', title: 'Change', click: 'this.topElement.hide();' },
+                    { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
+                ]
+            }]
+        },
+
+        addWindow: {
+            _constructor: 'Window',
+            title: 'Add User',
+            width: 320,
+            height: 250,
+            autoCenter: true,
+            isModal: true,
+            showModalMask: true,
+            items: [{
+                _constructor: 'DynamicForm',
+                height: '100%',
+                padding: 4,
+                numCols: 2,
+                titleOrientation: 'top',
+                titleWidth: 100,
+                dataSource: 'users',
+                fields: [
+                    { name: 'login' },
+                    { name: 'email' },
+                    { name: 'firstName' },
+                    { name: 'secondName' },
+                    { name: 'password', title: 'Password', type: 'password' },
+                    { name: 'password2', title: 'Confirm Password', type: 'password'},
+                    { name: 'role', colSpan: 2, width: '*' }
+                ]
+            }, {
+                _constructor: 'HLayout',
+                layoutMargin: 6,
+                membersMargin: 6,
+                align: 'right',
+                members: [
+                    { _constructor: 'Button', title: 'Create', click: 'this.topElement.hide();' },
                     { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
                 ]
             }]

@@ -5,7 +5,7 @@ Clonoz.DataSource.create({
     testData: testDataStorages,
     dataURL: '/Clonoz/Test/Storages',
     fields:[
-        { name: 'type', type: 'string' },
+        { name: 'type', type: 'string', foreignKey: 'storageType.name', editorType: 'ComboBoxItem' },
         { name: 'name', type: 'sequence', primaryKey: true },
         { name: 'path', type: 'string' },
         { name: 'sources', type: 'integer' },

@@ -5,7 +5,7 @@ Clonoz.DataSource.create({
     testData: testDataConnections,
     dataURL: '/Clonoz/Test/Connection',
     fields:[
-        { name: 'type', type: 'string' },
+        { name: 'type', type: 'string', foreignKey: 'databaseType.name', editorType: 'ComboBoxItem' },
         { name: 'name', type: 'sequence', primaryKey: true },
         { name: 'host', type: 'string' },
         { name: 'user', type: 'string' },

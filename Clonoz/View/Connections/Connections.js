@@ -7,7 +7,8 @@ Clonoz.createClass('View.Connections.Connections', view).addProperties({
         contents: 'Connections'
     },
     addButton: {
-        title: 'Create New Connection'
+        title: 'Create New Connection',
+        click: view.fire('Create')
     },
     list: {
         dataSource: 'connections',
@@ -94,6 +95,41 @@ Clonoz.createClass('View.Connections.Connections', view).addProperties({
                 align: 'right',
                 members: [
                     { _constructor: 'Button', title: 'Change', click: 'this.topElement.hide();' },
+                    { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
+                ]
+            }]
+        },
+
+        addWindow: {
+            _constructor: 'Window',
+            title: 'Add Connection',
+            width: 320,
+            height: 190,
+            autoCenter: true,
+            isModal: true,
+            showModalMask: true,
+            items: [{
+                _constructor: 'DynamicForm',
+                height: '100%',
+                padding: 4,
+                numCols: 2,
+                titleOrientation: 'top',
+                titleWidth: 100,
+                dataSource: 'connections',
+                fields: [
+                    { name: 'name', colSpan: 2, width: '*' },
+                    { name: 'host', startRow: true },
+                    { name: 'user' },
+                    { name: 'password', title: 'Password', type: 'password' },
+                    { name: 'password2', title: 'Confirm Password', type: 'password'}
+                ]
+            }, {
+                _constructor: 'HLayout',
+                layoutMargin: 6,
+                membersMargin: 6,
+                align: 'right',
+                members: [
+                    { _constructor: 'Button', title: 'Create', click: 'this.topElement.hide();' },
                     { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
                 ]
             }]

@@ -7,7 +7,8 @@ Clonoz.createClass('View.Sources.Sources', view).addProperties({
         contents: 'Sources'
     },
     addButton: {
-        title: 'Create New Source'
+        title: 'Create New Source',
+        click: view.fire('Create')
     },
     list: {
         dataSource: 'sources',
@@ -65,5 +66,41 @@ Clonoz.createClass('View.Sources.Sources', view).addProperties({
                 }]
             }
         }]
+    },
+
+    components: {
+
+        addWindow: {
+            _constructor: 'Window',
+            title: 'Add Source',
+            width: 250,
+            height: 200,
+            autoCenter: true,
+            isModal: true,
+            showModalMask: true,
+            items: [{
+                _constructor: 'DynamicForm',
+                height: '100%',
+                padding: 4,
+                numCols: 1,
+                titleOrientation: 'top',
+                titleWidth: 100,
+                dataSource: 'sources',
+                fields: [
+                    { name: 'name' },
+                    { name: 'storage' },
+                    { name: 'connection' },
+                ]
+            }, {
+                _constructor: 'HLayout',
+                layoutMargin: 6,
+                membersMargin: 6,
+                align: 'center',
+                members: [
+                    { _constructor: 'Button', title: 'Create', click: 'this.topElement.hide();' },
+                    { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
+                ]
+            }]
+        }
     }
 });
