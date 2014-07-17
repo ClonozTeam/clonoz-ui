@@ -85,7 +85,11 @@ Clonoz.createClass('View.Main.Main', view).addProperties({
                     ID: 'mocking',
                     title: 'Mocking',
                     icon: 'menu/mocking-small.png',
-                    iconSize: 20
+                    iconSize: 20,
+                    pane: {
+                        _constructor: Clonoz.View.Mocking.Mocking,
+                        autoDraw: false
+                    }
                 }, {
                     ID: 'users',
                     title: 'Users',

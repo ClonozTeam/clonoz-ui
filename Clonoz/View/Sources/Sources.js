@@ -87,9 +87,9 @@ Clonoz.createClass('View.Sources.Sources', view).addProperties({
                 titleWidth: 100,
                 dataSource: 'sources',
                 fields: [
-                    { name: 'name' },
-                    { name: 'storage' },
-                    { name: 'connection' },
+                    { name: 'name', width: '*' },
+                    { name: 'storage', width: '*' },
+                    { name: 'connection', width: '*' },
                 ]
             }, {
                 _constructor: 'HLayout',
