@@ -113,8 +113,8 @@ Clonoz.createClass('Component.ListGrid', Clonoz.ListGrid).addMethods({
     /**
      * Constructor
      */
-    initWidget: function(conf) {
-        var result = this.Super('initWidget', conf);
+    initWidget: function() {
+        this.Super('initWidget', arguments);
 
         // If cell record components are set to true and component related function are note set.
         if (this.showRecordComponents && this.showRecordComponentsByCell && !this.createRecordComponent && !this.updateRecordComponent) {
@@ -127,7 +127,5 @@ Clonoz.createClass('Component.ListGrid', Clonoz.ListGrid).addMethods({
                 }
             }
         }
-
-        return result;
     }
 });

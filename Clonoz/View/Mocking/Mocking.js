@@ -3,14 +3,14 @@
  */
 var view = Clonoz.View.TableView;
 Clonoz.createClass('View.Mocking.Mocking', view).addProperties({
-    label: {
+    viewTitleProperties: {
         contents: 'Mocking'
     },
-    addButton: {
+    addButonProperties: {
         title: 'Create Mocking Rule',
         click: view.fire('Create')
     },
-    list: {
+    mainGridProperties: {
         dataSource: 'mocking',
         groupByField: ['source'],
         canGroupBy: false,
@@ -64,58 +64,16 @@ Clonoz.createClass('View.Mocking.Mocking', view).addProperties({
     },
 
     components: {
-        // Window to shedule periodical refreshing.
-        sheduleWindow: {
-            _constructor: 'Window',
-            title: 'Schedule Refresh',
-            width: 270,
-            height: 130,
-            autoCenter: true,
-            isModal: true,
-            showModalMask: true,
-            items: [{
-                _constructor: 'DynamicForm',
-                height: 48,
-                padding:4,
-                titleWidth: 100,
-                fields: [
-                    { name: 'refresh', title: 'First Refresh', type: 'datetime' },
-                    { name: 'period', title: 'Refresh period in hours', type: 'integer'}
-                ]
-            }, {
-                _constructor: 'HLayout',
-                layoutMargin: 6,
-                membersMargin: 6,
-                align: 'right',
-                members: [
-                    { _constructor: 'Button', title: 'Schedule', click: 'this.topElement.hide();' },
-                    { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
-                ]
-            }]
-        },
-
         addWindow: {
-            _constructor: 'Window',
-            title: 'Add Database',
-            width: 480,
-            height: 170,
-            autoCenter: true,
-            isModal: true,
-            showModalMask: true,
-            items: [{
-                _constructor: 'DynamicForm',
-                height: '100%',
-                padding: 4,
-                numCols: 3,
-                titleOrientation: 'top',
-                titleWidth: 100,
+            _constructor: 'Component_FormWindow',
+            title: 'Add Mocking Rule',
+            mainFormProperties: {
                 dataSource: 'mocking',
                 fields: [
                     { name: 'name' },
                     {
                         name: 'source',
                         change: 'form.clearValue("database"); form.clearValue("method"); form.getField("database").setDisabled(!value); form.getField("method").setDisabled(!value);'
-
                     },
                     {
                         name: 'database',
@@ -128,22 +86,16 @@ Clonoz.createClass('View.Mocking.Mocking', view).addProperties({
                     { name: 'entity', title: 'Entity', disabled: true, change: 'form.getField("field").setDisabled(!value);' },
                     { name: 'field', title: 'Field', disabled: true },
                     { name: 'method', title: 'Method',
-
                         getPickListFilterCriteria: function() {
                             var record  = this.form.getField("source").getSelectedRecord();
                             return { supportedDatabases: record['type'] };
                         }, disabled: true }
                 ]
-            }, {
-                _constructor: 'HLayout',
-                layoutMargin: 6,
-                membersMargin: 6,
-                align: 'right',
-                members: [
-                    { _constructor: 'Button', title: 'Create', click: 'this.topElement.hide();' },
-                    { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
-                ]
-            }]
+            },
+            buttons: [
+                { _constructor: 'Button', title: 'Create', click: 'this.topElement.hide();' },
+                { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
+            ]
         }
     }
 });

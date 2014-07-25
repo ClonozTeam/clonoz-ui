@@ -510,6 +510,11 @@ overwritten by _base.scss.
   border: 1px solid #ababab;
 }
 
+.menuTable hr {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .menuMain {
   background-image: url(./images/Menu/menu_background.png);
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iNTAlIiB4Mj0iMTAwJSIgeTI9IjUwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2RiZGJkYiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==') padding-box;
@@ -590,23 +595,9 @@ overwritten by _base.scss.
 .treeMenuSelectedOverDark,
 .treeMenuSelectedSelected,
 .treeMenuSelectedSelectedOver {
-  background-color: #c4ddfd;
-  background-image: url(./images/ListGrid/row_Over.png);
-  background-repeat: repeat-x;
-  background-position: bottom left;
-  background-attachment: scroll;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M0ZGRmZCIvPjxzdG9wIG9mZnNldD0iOSUiIHN0b3AtY29sb3I9IiNmMGY4ZmYiLz48c3RvcCBvZmZzZXQ9IjE0JSIgc3RvcC1jb2xvcj0iI2U1ZjNmZiIvPjxzdG9wIG9mZnNldD0iODYlIiBzdG9wLWNvbG9yPSIjY2NlNWZmIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYzRkZGZkIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c4ddfd), color-stop(9%, #f0f8ff), color-stop(14%, #e5f3ff), color-stop(86%, #cce5ff), color-stop(100%, #c4ddfd));
-  background-image: -webkit-linear-gradient(top, #c4ddfd 0%, #f0f8ff 9%, #e5f3ff 14%, #cce5ff 86%, #c4ddfd 100%);
-  background-image: -moz-linear-gradient(top, #c4ddfd 0%, #f0f8ff 9%, #e5f3ff 14%, #cce5ff 86%, #c4ddfd 100%);
-  background-image: -o-linear-gradient(top, #c4ddfd 0%, #f0f8ff 9%, #e5f3ff 14%, #cce5ff 86%, #c4ddfd 100%);
-  background-image: linear-gradient(top, #c4ddfd 0%, #f0f8ff 9%, #e5f3ff 14%, #cce5ff 86%, #c4ddfd 100%);
-  border-bottom: 1px solid #c4ddfd;
-  border-top: 1px solid #c4ddfd;
-  -webkit-box-shadow: inset #e5f0ff 0 1px 0, inset #e5f0ff 0 -1px 0;
-  -moz-box-shadow: inset #e5f0ff 0 1px 0, inset #e5f0ff 0 -1px 0;
-  box-shadow: inset #e5f0ff 0 1px 0, inset #e5f0ff 0 -1px 0;
+  background-color: #ccc;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
 }
 
 .menuTitleField,
@@ -726,33 +717,20 @@ overwritten by _base.scss.
 		dialog.headerLabelDefaults.styleName - dialogHeaderText
 ============================================================*/
 .windowBackground {
-  background: #f7f7f7;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y3ZjdmNyIvPjxzdG9wIG9mZnNldD0iMSUiIHN0b3AtY29sb3I9IiNmN2Y3ZjciLz48c3RvcCBvZmZzZXQ9IjElIiBzdG9wLWNvbG9yPSIjZjJmMmYyIi8+PHN0b3Agb2Zmc2V0PSIxNSUiIHN0b3AtY29sb3I9IiNlMGUwZTAiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlMGUwZTAiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f7f7f7), color-stop(1%, #f7f7f7), color-stop(1%, #f2f2f2), color-stop(15%, #e0e0e0), color-stop(100%, #e0e0e0));
-  background-image: -webkit-linear-gradient(top, #f7f7f7 0%, #f7f7f7 1%, #f2f2f2 1%, #e0e0e0 15%, #e0e0e0 100%);
-  background-image: -moz-linear-gradient(top, #f7f7f7 0%, #f7f7f7 1%, #f2f2f2 1%, #e0e0e0 15%, #e0e0e0 100%);
-  background-image: -o-linear-gradient(top, #f7f7f7 0%, #f7f7f7 1%, #f2f2f2 1%, #e0e0e0 15%, #e0e0e0 100%);
-  background-image: linear-gradient(top, #f7f7f7 0%, #f7f7f7 1%, #f2f2f2 1%, #e0e0e0 15%, #e0e0e0 100%);
-  border: 1px solid #b5b5b5;
-  -moz-border-radius-bottomleft: 0px;
-  -webkit-border-bottom-left-radius: 0px;
-  border-bottom-left-radius: 0px;
-  -moz-border-radius-bottomright: 0px;
-  -webkit-border-bottom-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  -moz-border-radius-topleft: 5px;
-  -webkit-border-top-left-radius: 5px;
-  border-top-left-radius: 5px;
-  -moz-border-radius-topright: 5px;
-  -webkit-border-top-right-radius: 5px;
-  border-top-right-radius: 5px;
-  -webkit-box-shadow: inset #fcfcfc 0 1px 0, inset #ededed 0 -1px 0, inset #ededed 1px 0 0, inset #ededed -1px 0 0;
-  -moz-box-shadow: inset #fcfcfc 0 1px 0, inset #ededed 0 -1px 0, inset #ededed 1px 0 0, inset #ededed -1px 0 0;
-  box-shadow: inset #fcfcfc 0 1px 0, inset #ededed 0 -1px 0, inset #ededed 1px 0 0, inset #ededed -1px 0 0;
+  background: #e6e6e6;
+  margin: 2px 0 0;
+  font-size: 14px;
+  text-align: left;
+  border: 0px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
 }
 
-.windowBody,
+.windowBody {
+  margin: 0px;
+}
+
 .dialogBody {
   background-color: white;
   border: 1px solid #b5b5b5;
@@ -761,12 +739,27 @@ overwritten by _base.scss.
   box-shadow: 0 1px #ededed, 0 -1px #ededed;
 }
 
-.windowHeader,
+.windowHeader {
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  background: #f5f5f5;
+  border-radius: 4px 4px 0 0;
+}
+
 .dialogHeader {
   padding: 0;
 }
 
-.windowHeaderText,
+.windowHeaderText {
+  color: #157fcc;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: helvetica,arial,verdana,sans-serif;
+  line-height: 16px;
+  padding: 3px 3px 0px 3px;
+}
+
 .dialogHeaderText {
   color: #4d4d4d;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -790,6 +783,40 @@ overwritten by _base.scss.
 .modalMask {
   background-color: black;
 }
+
+.smartDialogBody {
+  background: transparent !important;
+}
+
+.smartDialogMain {
+  background: #fff;
+}
+
+.smartDialogBody .control-label,
+.smartDialogBody .pickListMenuBody td {
+  font-size: 12px
+}
+
+.smartDialogBody .btn-primary {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+.smartDialogBody .pickerElementSpinner table img {
+  height: 14px !important;
+}
+
+.smartDialogBody .form-control {
+  height: 30px !important;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+}
+
+
 
 /*============================================================
     5) Layout
@@ -1340,7 +1367,7 @@ overwritten by _base.scss.
 .nestedFormContainerDisabled,
 .nestedFormContainerDisabledRTL {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .formTitle,
@@ -1433,7 +1460,7 @@ overwritten by _base.scss.
 .labelAnchorFocusedRTL {
   color: black;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 11px;
+  font-size: 14px;
 }
 
 .formTitle,
@@ -1457,9 +1484,12 @@ overwritten by _base.scss.
 }
 
 .formHint,
-.formHintRTL {
-  color: #684547;
+.formHintRTL,
+.formHint .staticTextItem,
+.formHintRTL .staticTextItem {
+  color: #888 !important;
   padding: 3px;
+  font-size: 12px !important;
 }
 
 /* Allow for nested forms to lie flush against the left-hand edge of the containing form */
@@ -1601,7 +1631,171 @@ overwritten by _base.scss.
 .comboBoxItemPickerOver,
 .comboBoxItemPickerFocused,
 .comboBoxItemPickerFocusedOver {
-  background-image: url(./images/pickers/pickers_sprite.png);
+  background: url(./images/pickers/comboBox_simple.png) no-repeat center center !important;
+  width: 15px;
+}
+
+.comboBoxItemPickerCellDisabled,
+.comboBoxItemPickerCell,
+.comboBoxItemPickerCellOver,
+.comboBoxItemPickerCellFocused,
+.comboBoxItemPickerCellFocusedOver {
+  width: 0px;
+  position: relative;
+  left: -20px;
+}
+
+.form-control-force-size {
+  padding: 0px !important;
+  border: 0px !important;
+}
+
+div.form-control-force-size {
+  padding: 6px 12px !important;
+  border: 1px solid #ccc !important;
+}
+
+.recordEditorCell div.form-control-force-size {
+  border-radius: 0px;
+  border: 0px !important;
+}
+
+.btn-smart-group {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+  border-radius: 3px;
+  height: 3-p;
+}
+
+.btn-smart-group .btn {
+  border-radius: 0;
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.btn-smart-group .btn-first {
+  margin-left: 0;
+  border-top-left-radius: 3;
+  border-bottom-left-radius: 3;
+}
+.btn-smart-group .btn-last {
+  border-top-right-radius: 3;
+  border-bottom-right-radius: 3;
+}
+.btn-smart-group div div {
+  position: static !important;
+  float: left;
+}
+
+.btn-smart-group .btn:hover,
+.btn-smart-group .btn:focus,
+.btn-smart-group .btn:active,
+.btn-smart-group .btn.active {
+  z-index: 2;
+}
+.btn-smart-group .btn {
+  outline: 0 !important;
+}
+.btn-smart-group div div + div {
+  margin-left: -1px;
+}
+
+.pickerElementSpinner {
+  cursor: pointer;
+}
+
+.pickerElementSpinner,
+.pickerElement {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.pickerElementSpinner .form-control,
+.pickerElement .form-control {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.pickerElementSpinner table td.pickerElementSpinner,
+.pickerElement table td.pickerElement {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background-color: #eee !important;
+  border: 1px solid #ccc !important;
+  border-left: 0px none !important;
+  text-align: center;
+}
+
+.pickerElementSpinner table img {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+.pickerElement table img {
+  width: 16px !important;
+  margin-left: 8 !important;
+}
+
+.recordEditorCell table {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.picker-mini-control {
+  background: #ffffff;
+  font-size: 12px;
+  line-height: 22px;
+}
+
+.mini-pickerElement img {
+  margin-left: -3px !important;
+}
+
+.pickListMenuBody {
+  padding: 0;
+  margin: 4px 0 0;
+  min-width: 160px;
+  font-size: 14px;
+  text-align: left;
+  border: 0px solid #ccc;
+  border-radius: 4px;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  -webkit-box-shadow: 1px 1px 2px 2px rgba(0,0,0,.175);
+  box-shadow: 1px 1px 2px 2px rgba(0,0,0,.175);
+}
+
+.pickListMenuBody div,
+.pickListMenuBody div table {
+  width: 100% !important;
+}
+.pickListMenuBody td {
+  font-size: 14px;
+  text-align: left;
+}
+
+.pickListMenuBody td div {
+  display: block;
+  padding: 3px 5px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+}
+
+.pickListCellSelectedDark,
+.pickListCellSelected {
+  color: #262626 !important;
+  text-decoration: none  !important;
+  background: #f5f5f5  !important;
 }
 
 .comboBoxItemPickerDisabledRTL,
@@ -1708,31 +1902,10 @@ overwritten by _base.scss.
   padding: 0px;
 }
 
-.pickListMenuBody {
-  background-color: white;
-  border: 1px solid #8fa7c7;
-}
-
 .pickListCell,
 .pickListCellDark,
 .tallPickListCell,
 .tallPickListCellDark {
-  color: black;
-}
-
-.pickListCellSelected,
-.pickListCellSelectedDark {
-  background-color: #fdc4c4;
-  background-image: url("./images/Menu/menu_rollover.png");
-  background-repeat: repeat-x;
-  background-attachment: scroll;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIxJSIgc3RvcC1jb2xvcj0iI2M0ZGRmZCIvPjxzdG9wIG9mZnNldD0iNSUiIHN0b3AtY29sb3I9IiNjNGRkZmQiLz48c3RvcCBvZmZzZXQ9IjUlIiBzdG9wLWNvbG9yPSIjZTVmOGZmIi8+PHN0b3Agb2Zmc2V0PSI5NSUiIHN0b3AtY29sb3I9IiNkMWU3ZmYiLz48c3RvcCBvZmZzZXQ9Ijk1JSIgc3RvcC1jb2xvcj0iI2M0ZGRmZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2M0ZGRmZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(1%, #c4ddfd), color-stop(5%, #c4ddfd), color-stop(5%, #e5f8ff), color-stop(95%, #d1e7ff), color-stop(95%, #c4ddfd), color-stop(100%, #c4ddfd));
-  background-image: -webkit-linear-gradient(top, #c4ddfd 1%, #c4ddfd 5%, #e5f8ff 5%, #d1e7ff 95%, #c4ddfd 95%, #c4ddfd 100%);
-  background-image: -moz-linear-gradient(top, #c4ddfd 1%, #c4ddfd 5%, #e5f8ff 5%, #d1e7ff 95%, #c4ddfd 95%, #c4ddfd 100%);
-  background-image: -o-linear-gradient(top, #c4ddfd 1%, #c4ddfd 5%, #e5f8ff 5%, #d1e7ff 95%, #c4ddfd 95%, #c4ddfd 100%);
-  background-image: linear-gradient(top, #c4ddfd 1%, #c4ddfd 5%, #e5f8ff 5%, #d1e7ff 95%, #c4ddfd 95%, #c4ddfd 100%);
   color: black;
 }
 
@@ -2387,6 +2560,11 @@ overwritten by _base.scss.
   border-radius: 5px 5px 0 0;
 }
 
+.recordEditorCell .form-control {
+  border-radius: 0px;
+  border: 0px;
+}
+
 /*============================================================
 	9) Slider & Rangebar
 ============================================================*/
@@ -2563,6 +2741,10 @@ overwritten by _base.scss.
   border: 1px solid #ababab;
 }
 
+.listGrid :focus {
+  outline: none;
+}
+
 .headerBar {
   background-color: white;
   background-image: url(./images/ListGrid/header.png);
@@ -2610,10 +2792,11 @@ overwritten by _base.scss.
 
 /* for filterEditor */
 .recordEditorCell {
-  background-color: #fafafa;
+  background-color: #fff;
   color: black;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
+  border-right: 1px solid #ddd;
 }
 
 /*============================================================
@@ -2824,7 +3007,7 @@ overwritten by _base.scss.
 .specialColSelectedOver,
 .specialColDisabled,
 .groupNode {
-  border-top: 1px solid #fafafa;
+  border-top: 1px solid #ddd;
   border-bottom: 1px solid #f0f0f0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-overflow: ellipsis;
@@ -2849,7 +3032,7 @@ overwritten by _base.scss.
 }
 
 .specialCol {
-  background-color: #fafafa;
+  background-color: #f5f5f5;
   color: black;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
@@ -2859,7 +3042,7 @@ overwritten by _base.scss.
 .cellDark,
 .recordSummaryCell,
 .recordSummaryCellDark {
-  background-color: #fafafa;
+  background-color: #f5f5f5;
 }
 
 .gridSummaryCell,
@@ -2871,8 +3054,7 @@ overwritten by _base.scss.
 
 .tallCellDark,
 .widgetCellDark {
-  background-color: #fafafa;
-  border-top: 1px solid #fafafa;
+  background-color: #f9f9f9;
 }
 
 .cellOver,
@@ -2880,31 +3062,17 @@ overwritten by _base.scss.
 .specialColOver,
 .recordSummaryCellOver,
 .recordSummaryCellOverDark {
-  background-color: #c4ddfd;
-  background-image: url(./images/ListGrid/row_Over.png);
-  background-repeat: repeat-x;
-  background-position: bottom left;
-  background-attachment: scroll;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M0ZGRmZCIvPjxzdG9wIG9mZnNldD0iOSUiIHN0b3AtY29sb3I9IiNmMGY4ZmYiLz48c3RvcCBvZmZzZXQ9IjE0JSIgc3RvcC1jb2xvcj0iI2U1ZjNmZiIvPjxzdG9wIG9mZnNldD0iODYlIiBzdG9wLWNvbG9yPSIjY2NlNWZmIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYzRkZGZkIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c4ddfd), color-stop(9%, #f0f8ff), color-stop(14%, #e5f3ff), color-stop(86%, #cce5ff), color-stop(100%, #c4ddfd));
-  background-image: -webkit-linear-gradient(top, #c4ddfd 0%, #f0f8ff 9%, #e5f3ff 14%, #cce5ff 86%, #c4ddfd 100%);
-  background-image: -moz-linear-gradient(top, #c4ddfd 0%, #f0f8ff 9%, #e5f3ff 14%, #cce5ff 86%, #c4ddfd 100%);
-  background-image: -o-linear-gradient(top, #c4ddfd 0%, #f0f8ff 9%, #e5f3ff 14%, #cce5ff 86%, #c4ddfd 100%);
-  background-image: linear-gradient(top, #c4ddfd 0%, #f0f8ff 9%, #e5f3ff 14%, #cce5ff 86%, #c4ddfd 100%);
-  border-bottom: 1px solid #c4ddfd;
-  border-top: 1px solid #c4ddfd;
-  -webkit-box-shadow: inset #e5f0ff 0 1px 0, inset #e5f0ff 0 -1px 0;
-  -moz-box-shadow: inset #e5f0ff 0 1px 0, inset #e5f0ff 0 -1px 0;
-  box-shadow: inset #e5f0ff 0 1px 0, inset #e5f0ff 0 -1px 0;
+  background-color: #d1d1d1;
+  border-bottom: 1px solid #d1d1d1;
+  border-top: 1px solid #d1d1d1;
 }
 
 .tallCellOver,
 .tallCellOverDark,
 .widgetCellOver,
 .widgetCellOverDark {
-  background-color: #dbedff;
-  border-top: 1px solid #e8e8e8;
+  background-color: #d1d1d1;
+  border-bottom: 1px solid #d1d1d1;
 }
 
 .cellSelected,
@@ -2912,18 +3080,16 @@ overwritten by _base.scss.
 .specialColSelected,
 .recordSummaryCellSelected,
 .recordSummaryCellSelectedDark {
-  background: #d6e8ff;
-  border-bottom: 1px dotted #9fb7e9;
-  border-top: 1px dotted #9fb7e9;
+  background: #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 .tallCellSelected,
 .tallCellSelectedDark,
 .widgetCellSelected,
 .widgetCellSelectedDark {
-  background: #d6e8ff;
-  border-bottom: 1px dotted #9fb7e9;
-  border-top: 1px dotted #9fb7e9;
+  background: #ccc;
+  border-bottom: 1px solid #ccc;
 }
 
 .cellSelectedOver,
@@ -2931,29 +3097,16 @@ overwritten by _base.scss.
 .specialColSelectedOver,
 .recordSummaryCellSelectedOver,
 .recordSummaryCellSelectedOverDark {
-  border-bottom: 1px solid #ababab;
-  border-top: 1px solid #b8cfef;
-  background-color: #c4ddfd;
-  background-image: url(./images/ListGrid/row_Selected_Over.png);
-  background-repeat: repeat-x;
-  background-attachment: scroll;
-  background-position: bottom left;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2M0ZGRmZCIvPjxzdG9wIG9mZnNldD0iOSUiIHN0b3AtY29sb3I9IiNmMGY4ZmYiLz48c3RvcCBvZmZzZXQ9IjE0JSIgc3RvcC1jb2xvcj0iI2U1ZjNmZiIvPjxzdG9wIG9mZnNldD0iODYlIiBzdG9wLWNvbG9yPSIjY2NlNWZmIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjYzRkZGZkIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #c4ddfd), color-stop(9%, #f0f8ff), color-stop(14%, #e5f3ff), color-stop(86%, #cce5ff), color-stop(100%, #c4ddfd));
-  background-image: -webkit-linear-gradient(top, #c4ddfd 0%, #f0f8ff 9%, #e5f3ff 14%, #cce5ff 86%, #c4ddfd 100%);
-  background-image: -moz-linear-gradient(top, #c4ddfd 0%, #f0f8ff 9%, #e5f3ff 14%, #cce5ff 86%, #c4ddfd 100%);
-  background-image: -o-linear-gradient(top, #c4ddfd 0%, #f0f8ff 9%, #e5f3ff 14%, #cce5ff 86%, #c4ddfd 100%);
-  background-image: linear-gradient(top, #c4ddfd 0%, #f0f8ff 9%, #e5f3ff 14%, #cce5ff 86%, #c4ddfd 100%);
+  background-color: #d1d1d1;
+  border-bottom: 1px solid #ccc;
 }
 
 .tallCellSelectedOver,
 .tallCellSelectedOverDark,
 .widgetCellSelectedOver,
 .widgetCellSelectedOverDark {
-  background-color: #d0dff6;
-  border-bottom: 1px dotted #9fb7e9;
-  border-top: 1px dotted #9fb7e9;
+  background-color: #d1d1d1;
+  border-bottom: 1px solid #ccc;
 }
 
 .gridSummaryCell,

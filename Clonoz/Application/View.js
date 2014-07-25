@@ -59,7 +59,7 @@ Clonoz.createClass('Application.View', 'Layout').addClassProperties({
 	setupBindings: function(widget) {
 		var me = this;
 
-		if (Clonoz.isAn.Instance(widget) && (widget == this ||!widget.isA(Clonoz.Application.View))) {
+		if (widget && Clonoz.isAn.Instance(widget) && (widget == this ||!widget.isA(Clonoz.Application.View))) {
 			// Add pointer to the view itself.
 			widget.addProperties({ view: this });
 
@@ -142,6 +142,39 @@ Clonoz.createClass('Application.View', 'Layout').addClassProperties({
 		return this.componentsCache[name];
 	},
 
+    /**
+     * Overwrite addAutoChild method to process binding.
+     *
+     * @return {Class} created autoChild.
+     */
+    addAutoChild : function () {
+    	var child = this.Super('addAutoChild', arguments);
+    	this.setupBindings(child);
+    	return child;
+	},
+
+    /**
+     * Overwrite addChild method to process binding.
+     *
+     * @return {Class} created autoChild.
+     */
+    addChild : function () {
+    	var child = this.Super('addChild', arguments);
+    	this.setupBindings(child);
+    	return child;
+	},
+
+    /**
+     * Overwrite addPeer method to process binding.
+     *
+     * @return {Class} created autoChild.
+     */
+    addPeer : function () {
+    	var peer = this.Super('addPeer', arguments);
+    	this.setupBindings(peer);
+    	return peer;
+	},
+
 	/**
 	 * Constructor
 	 */
@@ -169,11 +202,8 @@ Clonoz.createClass('Application.View', 'Layout').addClassProperties({
 			});
 		}
 
-		var result = this.Super('initWidget', conf);
+		this.Super('initWidget', arguments);
 
-		// Setup binding.
 		this.setupBindings(this);
-
-		return result;
 	}
 });

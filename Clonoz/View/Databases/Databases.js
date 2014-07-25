@@ -3,14 +3,14 @@
  */
 var view = Clonoz.View.TableView;
 Clonoz.createClass('View.Databases.Databases', view).addProperties({
-    label: {
+    viewTitleProperties: {
         contents: 'Databases'
     },
-    addButton: {
+    addButonProperties: {
         title: 'Clone New Database',
         click: view.fire('Create')
     },
-    list: {
+    mainGridProperties: {
         dataSource: 'databases',
         fields: [{
             name: 'type',
@@ -99,68 +99,39 @@ Clonoz.createClass('View.Databases.Databases', view).addProperties({
     components: {
         // Window to shedule periodical refreshing.
         sheduleWindow: {
-            _constructor: 'Window',
+            _constructor: 'Component_FormWindow',
             title: 'Schedule Refresh',
-            width: 270,
-            height: 130,
-            autoCenter: true,
-            isModal: true,
-            showModalMask: true,
-            items: [{
-                _constructor: 'DynamicForm',
-                height: 48,
-                padding:4,
-                titleWidth: 100,
+            mainFormProperties: {
+                numCols: 1,
                 fields: [
                     { name: 'refresh', title: 'First Refresh', type: 'datetime' },
                     { name: 'period', title: 'Refresh period in hours', type: 'integer'}
                 ]
-            }, {
-                _constructor: 'HLayout',
-                layoutMargin: 6,
-                membersMargin: 6,
-                align: 'right',
-                members: [
-                    { _constructor: 'Button', title: 'Schedule', click: 'this.topElement.hide();' },
-                    { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
-                ]
-            }]
+            },
+            buttons: [
+                { _constructor: 'Button', title: 'Schedule', click: 'this.topElement.hide();' },
+                { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
+            ]
         },
 
         addWindow: {
-            _constructor: 'Window',
+            _constructor: 'Component_FormWindow',
             title: 'Add Database',
-            width: 320,
-            height: 300,
-            autoCenter: true,
-            isModal: true,
-            showModalMask: true,
-            items: [{
-                _constructor: 'DynamicForm',
-                height: '100%',
-                padding: 4,
-                numCols: 2,
-                titleOrientation: 'top',
-                titleWidth: 100,
+            mainFormProperties: {
                 dataSource: 'databases',
                 fields: [
                     { name: 'name' },
                     { name: 'source' },
                     { name: 'refresh', title: 'First Refresh', type: 'datetime' },
                     { name: 'period', title: 'Refresh period in hours', type: 'integer'},
-                    { name: 'note', colSpan: 3, width: '*' },
-                    { name: 'private' },
+                    { name: 'note', colSpan: 2, width: 500 },
+                    { name: 'private', showTitle: false }
                 ]
-            }, {
-                _constructor: 'HLayout',
-                layoutMargin: 6,
-                membersMargin: 6,
-                align: 'right',
-                members: [
-                    { _constructor: 'Button', title: 'Clone', click: 'this.topElement.hide();' },
-                    { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
-                ]
-            }]
+            },
+            buttons: [
+                { _constructor: 'Button', title: 'Clone', click: 'this.topElement.hide();' },
+                { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
+            ]
         }
     }
 });

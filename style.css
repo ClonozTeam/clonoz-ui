@@ -70,6 +70,7 @@ body {
     padding-top: 3px;
 }
 
+/*
 .listGrid {
     overflow: visible;
     -webkit-box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.35) !important;
@@ -78,10 +79,8 @@ body {
     border-radius: 5px;
  }
 
-.listGrid :focus {
-	outline: none;
-}
 
+*/
 .title {
 	color: #878ea2;
 	font-size: 14px;

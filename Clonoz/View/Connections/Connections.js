@@ -3,14 +3,14 @@
  */
 var view = Clonoz.View.TableView;
 Clonoz.createClass('View.Connections.Connections', view).addProperties({
-        label: {
+    viewTitleProperties: {
         contents: 'Connections'
     },
-    addButton: {
+    addButonProperties: {
         title: 'Create New Connection',
         click: view.fire('Create')
     },
-    list: {
+    mainGridProperties: {
         dataSource: 'connections',
         fields: [{
             name: 'type',
@@ -70,69 +70,40 @@ Clonoz.createClass('View.Connections.Connections', view).addProperties({
     },
 
    components: {
-        // Window to shedule periodical refreshing.
+        // Change password.
         changePasswordWindow: {
-            _constructor: 'Window',
+            _constructor: 'Component_FormWindow',
             title: 'Change Password',
-            width: 270,
-            height: 130,
-            autoCenter: true,
-            isModal: true,
-            showModalMask: true,
-            items: [{
-                _constructor: 'DynamicForm',
-                height: 48,
-                padding:4,
-                titleWidth: 100,
+            mainFormProperties: {
+                numCols: 1,
                 fields: [
                     { name: 'password', title: 'New Password', type: 'password' },
                     { name: 'password2', title: 'Confirm New Password', type: 'password'}
                 ]
-            }, {
-                _constructor: 'HLayout',
-                layoutMargin: 6,
-                membersMargin: 6,
-                align: 'right',
-                members: [
-                    { _constructor: 'Button', title: 'Change', click: 'this.topElement.hide();' },
-                    { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
-                ]
-            }]
+            },
+            buttons: [
+                { _constructor: 'Button', title: 'Change', click: 'this.topElement.hide();' },
+                { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
+            ]
         },
 
         addWindow: {
-            _constructor: 'Window',
+            _constructor: 'Component_FormWindow',
             title: 'Add Connection',
-            width: 320,
-            height: 190,
-            autoCenter: true,
-            isModal: true,
-            showModalMask: true,
-            items: [{
-                _constructor: 'DynamicForm',
-                height: '100%',
-                padding: 4,
-                numCols: 2,
-                titleOrientation: 'top',
-                titleWidth: 100,
+            mainFormProperties: {
                 dataSource: 'connections',
                 fields: [
-                    { name: 'name', colSpan: 2, width: '*' },
+                    { name: 'name', colSpan: 2, width: 500 },
                     { name: 'host', startRow: true },
                     { name: 'user' },
                     { name: 'password', title: 'Password', type: 'password' },
                     { name: 'password2', title: 'Confirm Password', type: 'password'}
                 ]
-            }, {
-                _constructor: 'HLayout',
-                layoutMargin: 6,
-                membersMargin: 6,
-                align: 'right',
-                members: [
-                    { _constructor: 'Button', title: 'Create', click: 'this.topElement.hide();' },
-                    { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
-                ]
-            }]
+            },
+            buttons: [
+                { _constructor: 'Button', title: 'Create', click: 'this.topElement.hide();' },
+                { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
+            ]
         }
     }
 });

@@ -3,14 +3,14 @@
  */
 var view = Clonoz.View.TableView;
 Clonoz.createClass('View.Storages.Storages', view).addProperties({
-    label: {
+    viewTitleProperties: {
         contents: 'Storages'
     },
-    addButton: {
+    addButonProperties: {
         title: 'Create New Storage',
         click: view.fire('Create')
     },
-    list: {
+    mainGridProperties: {
         dataSource: 'storages',
         fields: [{
             name: 'type',
@@ -69,37 +69,21 @@ Clonoz.createClass('View.Storages.Storages', view).addProperties({
     },
 
     components: {
-
         addWindow: {
-            _constructor: 'Window',
+            _constructor: 'Component_FormWindow',
             title: 'Add Storage',
-            width: 250,
-            height: 150,
-            autoCenter: true,
-            isModal: true,
-            showModalMask: true,
-            items: [{
-                _constructor: 'DynamicForm',
-                height: '100%',
-                padding: 4,
-                numCols: 1,
-                titleOrientation: 'top',
-                titleWidth: 100,
+            mainFormProperties: {
                 dataSource: 'storages',
+                numCols: 1,
                 fields: [
-                    { name: 'name', width: '*' },
-                    { name: 'type', align: 'left', width: '*' }
+                    { name: 'name' },
+                    { name: 'type' }
                 ]
-            }, {
-                _constructor: 'HLayout',
-                layoutMargin: 6,
-                membersMargin: 6,
-                align: 'center',
-                members: [
-                    { _constructor: 'Button', title: 'Create', click: 'this.topElement.hide();' },
-                    { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
-                ]
-            }]
+            },
+            buttons: [
+                { _constructor: 'Button', title: 'Create', click: 'this.topElement.hide();' },
+                { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
+            ]
         }
     }
 });

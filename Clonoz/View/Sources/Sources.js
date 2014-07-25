@@ -3,14 +3,14 @@
  */
 var view = Clonoz.View.TableView;
 Clonoz.createClass('View.Sources.Sources', view).addProperties({
-    label: {
+    viewTitleProperties: {
         contents: 'Sources'
     },
-    addButton: {
+    addButonProperties: {
         title: 'Create New Source',
         click: view.fire('Create')
     },
-    list: {
+    mainGridProperties: {
         dataSource: 'sources',
         fields: [{
             name: 'type',
@@ -69,38 +69,22 @@ Clonoz.createClass('View.Sources.Sources', view).addProperties({
     },
 
     components: {
-
         addWindow: {
-            _constructor: 'Window',
-            title: 'Add Source',
-            width: 250,
-            height: 200,
-            autoCenter: true,
-            isModal: true,
-            showModalMask: true,
-            items: [{
-                _constructor: 'DynamicForm',
-                height: '100%',
-                padding: 4,
-                numCols: 1,
-                titleOrientation: 'top',
-                titleWidth: 100,
+            _constructor: 'Component_FormWindow',
+            title: 'Add source',
+            mainFormProperties: {
                 dataSource: 'sources',
+                numCols: 1,
                 fields: [
-                    { name: 'name', width: '*' },
-                    { name: 'storage', width: '*' },
-                    { name: 'connection', width: '*' },
+                    { name: 'name' },
+                    { name: 'storage' },
+                    { name: 'connection' },
                 ]
-            }, {
-                _constructor: 'HLayout',
-                layoutMargin: 6,
-                membersMargin: 6,
-                align: 'center',
-                members: [
-                    { _constructor: 'Button', title: 'Create', click: 'this.topElement.hide();' },
-                    { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
-                ]
-            }]
+            },
+            buttons: [
+                { _constructor: 'Button', title: 'Create', click: 'this.topElement.hide();' },
+                { _constructor: 'Button', title: 'Cancel', click: 'this.topElement.hide();' }
+            ]
         }
     }
 });
