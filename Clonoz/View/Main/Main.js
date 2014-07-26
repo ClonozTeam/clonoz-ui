@@ -31,9 +31,11 @@ Clonoz.createClass('View.Main.Main', view).addProperties({
             tabBarThickness: 230,
             useSimpleTabs: true,
             simpleTabBaseStyle: 'clonoz-menu-tab',
-            showTabScroller: false,  // TODO: Implement nice tabScroller.
             showTabPicker: false,
             tabSelected: view.fire('TabSelected'),
+            scrollerProperties: {
+                baseStyle: 'mainTabScroller'
+            },
             tabBarProperties: {
                 backgroundColor: Theme.tabBarColor,
                 baseLineThickness: 0,

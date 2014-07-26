@@ -964,6 +964,10 @@ overwritten by _base.scss.
   padding-bottom: 1px;
 }
 
+.mainTabScroller {
+  outline: 0;
+}
+
 .tabScrollerTopBackDisabled,
 .tabScrollerTopBack,
 .tabScrollerTopBackDown,
@@ -989,102 +993,152 @@ overwritten by _base.scss.
 .tabScrollerLeftForward,
 .tabScrollerLeftForwardDown {
   background-image: url(./images/TabSet/tabset_sprite.png);
+  background-repeat: no-repeat;
+  background-color: rgb(52, 61, 72);
 }
 
 .tabScrollerTopBackDisabled {
-  background-position: 0px 0px;
+  background-position: center 0px;
+  background-color: rgb(62, 71, 82);
 }
 
 .tabScrollerTopBack {
-  background-position: 0px -23px;
+  background-position: center -16px;
+}
+
+.tabScrollerTopBack:hover {
+  background-color: rgb(82, 81, 92);
 }
 
 .tabScrollerTopBackDown {
-  background-position: 0px -46px;
+  background-position: center -32px;
+  background-color: rgb(82, 81, 92);
 }
 
 .tabScrollerRightBackDisabled {
-  background-position: -122px 0px;
+  background-position: center -96px;
+  background-color: rgb(62, 71, 82);
 }
 
 .tabScrollerRightBack {
-  background-position: -122px -19px;
+  background-position: center -112px;
+}
+
+.tabScrollerRightBack:hover {
+  background-color: rgb(82, 81, 92);
 }
 
 .tabScrollerRightBackDown {
-  background-position: -122px -38px;
+  background-position: center -128px;
+  background-color: rgb(82, 81, 92);
 }
 
 .tabScrollerBottomBackDisabled {
-  background-position: -38px 0px;
+  background-position: center 0px;
+  background-color: rgb(62, 71, 82);
 }
 
 .tabScrollerBottomBack {
-  background-position: -38px -23px;
+  background-position: center -16px;
+}
+
+.tabScrollerBottomBack:hover {
+  background-color: rgb(82, 81, 92);
 }
 
 .tabScrollerBottomBackDown {
-  background-position: -38px -46px;
+  background-position: center -32px;
+  background-color: rgb(82, 81, 92);
 }
 
 .tabScrollerLeftBackDisabled {
-  background-position: -76px 0px;
+  background-position: center -96px;
+  background-color: rgb(62, 71, 82);
 }
 
 .tabScrollerLeftBack {
-  background-position: -76px -19px;
+  background-position: center -112px;
+}
+
+.tabScrollerLeftBack:hover {
+  background-color: rgb(82, 81, 92);
 }
 
 .tabScrollerLeftBackDown {
-  background-position: -76px -38px;
+  background-position: center -128px;
+  background-color: rgb(82, 81, 92);
 }
 
 .tabScrollerTopForwardDisabled {
-  background-position: -19px 0px;
+  background-position: center -48px;
+  background-color: rgb(62, 71, 82);
 }
 
 .tabScrollerTopForward {
-  background-position: -19px -23px;
+  background-position: center -64px;
+}
+
+.tabScrollerTopForward:hover {
+  background-color: rgb(82, 81, 92);
 }
 
 .tabScrollerTopForwardDown {
-  background-position: -19px -46px;
+  background-position: center -80px;
+  background-color: rgb(82, 81, 92);
 }
 
 .tabScrollerRightForwardDisabled {
-  background-position: -145px 0px;
+  background-position: center -144px;
+  background-color: rgb(62, 71, 82);
 }
 
 .tabScrollerRightForward {
-  background-position: -145px -19px;
+  background-position: center -160px;
+}
+
+.tabScrollerRightForward:hover {
+  background-color: rgb(82, 81, 92);
 }
 
 .tabScrollerRightForwardDown {
-  background-position: -145px -38px;
+  background-position: center -176px;
+  background-color: rgb(82, 81, 92);
 }
 
 .tabScrollerBottomForwardDisabled {
-  background-position: -57px 0px;
+  background-position: center -48px;
+  background-color: rgb(62, 71, 82);
 }
 
 .tabScrollerBottomForward {
-  background-position: -57px -23px;
+  background-position: center -64px;
+}
+
+.tabScrollerBottomForward:hover {
+  background-color: rgb(82, 81, 92);
 }
 
 .tabScrollerBottomForwardDown {
-  background-position: -57px -46px;
+  background-position: center -80px;
+  background-color: rgb(82, 81, 92);
 }
 
 .tabScrollerLeftForwardDisabled {
-  background-position: -99px 0px;
+  background-position: center -144px;
+  background-color: rgb(62, 71, 82);
 }
 
 .tabScrollerLeftForward {
-  background-position: -99px -19px;
+  background-position: center -160px;
+}
+
+.tabScrollerLeftForward:hover {
+  background-color: rgb(82, 81, 92);
 }
 
 .tabScrollerLeftForwardDown {
-  background-position: -99px -38px;
+  background-position: center -176px;
+  background-color: rgb(82, 81, 92);
 }
 
 .tabPickerDisabledtop,
